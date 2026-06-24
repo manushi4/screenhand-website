@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScreenHand — AI hands for Android</title>
+<meta name="description" content="Control and automate any Android device with an AI agent or from your browser. Real taps, real typing, real apps — over the internet. MCP-native, 20 tools, one private link.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://screenhand.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ScreenHand — AI hands for Android">
+<meta property="og:description" content="Give your AI agent real hands on a real Android phone. Real taps, real typing, real apps — over the internet. MCP-native.">
+<meta property="og:image" content="/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ScreenHand for Android",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Android",
+  "description": "Control and automate any Android device with an AI agent or from your browser. Real taps, typing and gestures on real apps, over the internet, via the Model Context Protocol.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "Free beta" },
+  "publisher": { "@type": "Organization", "name": "Clazro Technology Private Limited" }
+}
+</script>
+<style>
+:root{
+  --bg:#0b0f14;--bg2:#10151c;--card:#121925;--card2:#0e141d;--line:#1f2937;--line2:#2b3647;
+  --text:#eef2f7;--text2:#a7b2c2;--text3:#6b7686;
+  --accent:#3b82f6;--accent-d:#2563eb;--accent-l:#1e293b;--cyan:#22d3ee;--emerald:#34d399;--amber:#fbbf24;
+  --f:'Inter',system-ui,-apple-system,sans-serif;
+  --fd:'Space Grotesk',sans-serif;
+  --m:'JetBrains Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --maxw:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--text);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none;transition:color .15s}a:hover{color:#60a5fa}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--fd);line-height:1.12;letter-spacing:-.02em;color:var(--text)}
+.eyebrow{font:600 13px/1 var(--m);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--text2)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;transition:transform .15s var(--ease),box-shadow .15s,background .15s,border-color .15s;cursor:pointer;border:0}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px -10px rgba(59,130,246,.7)}
+.btn-primary:hover{color:#fff;background:var(--accent-d);transform:translateY(-2px);box-shadow:0 14px 32px -12px rgba(59,130,246,.7)}
+.btn-ghost{color:var(--text);border:1px solid var(--line2);background:transparent}
+.btn-ghost:hover{color:var(--text);border-color:var(--text3);background:var(--bg2)}
+nav{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font:700 19px var(--fd);color:var(--text);letter-spacing:-.01em}
+.brand img{width:28px;height:28px;border-radius:7px}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:500}
+.nav-links a{color:var(--text2)}.nav-links a:hover{color:var(--text)}
+@media(max-width:820px){.nav-links a:not(.btn){display:none}}
+.hero{padding:88px 0 64px;background:radial-gradient(120% 90% at 75% -10%,rgba(59,130,246,.16) 0%,transparent 55%)}
+.kicker{font:600 12.5px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line2);background:var(--bg2);padding:6px 13px;border-radius:999px}
+.hero h1{font-size:clamp(36px,5.6vw,62px);font-weight:700;max-width:16ch;margin:22px 0 0}
+.hero p.lead{font-size:clamp(17px,2.1vw,20px);color:var(--text2);max-width:58ch;margin:22px 0 0}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 0;align-items:center}
+.cta-note{font-size:13px;color:var(--text3)}
+.code{margin:30px 0 0;border-radius:13px;border:1px solid var(--line);background:#0a0e14;overflow:hidden;box-shadow:0 24px 60px -30px rgba(0,0,0,.7)}
+.code-bar{display:flex;align-items:center;gap:8px;padding:11px 15px;background:var(--bg2);border-bottom:1px solid var(--line)}
+.dot{width:11px;height:11px;border-radius:50%}.r{background:#ff5f57}.y{background:#ffbd2e}.g{background:#28c840}
+.code-title{margin-left:8px;font:500 12px var(--m);color:var(--text3)}
+.code pre{padding:18px 18px;font-family:var(--m);font-size:13px;line-height:1.7;color:#cdd6e4;overflow-x:auto}
+.code .c{color:var(--text3)}.code .k{color:var(--cyan)}.code .u{color:#7dd3fc}
+.trust{font-size:13px;color:var(--text3);margin:16px 0 0}
+.trust b{color:var(--text2);font-weight:600}
+section{padding:78px 0;border-top:1px solid var(--line)}
+.sec-head{max-width:64ch}
+.sec-head h2{font-size:clamp(27px,3.4vw,40px);font-weight:700;margin:12px 0 0}
+.sec-head p{color:var(--text2);font-size:17px;margin:14px 0 0}
+.grid{display:grid;gap:18px;margin:42px 0 0}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--card);transition:border-color .15s,transform .15s var(--ease),background .15s}
+.card:hover{border-color:var(--line2);transform:translateY(-3px);background:#141b27}
+.card h3{font-size:18px;font-weight:600;color:var(--text)}
+.card p{color:var(--text2);font-size:14.5px;margin:9px 0 0}
+.card .ic{font-size:22px;line-height:1;display:block;margin:0 0 12px}
+.kw{font:600 12px var(--m);color:var(--accent);letter-spacing:.04em;text-transform:uppercase}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:42px 0 0;counter-reset:s}
+@media(max-width:860px){.flow{grid-template-columns:1fr}}
+.flow .card::before{counter-increment:s;content:"0" counter(s);font:700 13px var(--m);color:var(--accent);display:block;margin:0 0 10px}
+.diagram{margin:26px 0 0;border:1px dashed var(--line2);border-radius:13px;padding:20px;background:var(--card2);text-align:center;font:500 13.5px var(--m);color:var(--text2);overflow-x:auto;white-space:nowrap}
+.diagram b{color:var(--text)}.diagram .ar{color:var(--accent);padding:0 8px}
+.pill{display:inline-flex;align-items:center;gap:8px;font:600 13px var(--m);color:var(--accent);background:var(--accent-l);border:1px solid var(--line2);padding:7px 14px;border-radius:999px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 0}
+.tool{font:500 13px var(--m);color:var(--text2);background:var(--card);border:1px solid var(--line);padding:8px 13px;border-radius:9px;transition:border-color .15s,color .15s}
+.tool:hover{border-color:var(--accent);color:var(--text)}
+.tool span{color:var(--text3)}
+.tabs{margin:36px 0 0}
+.tab-btns{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.tab-btn{font:500 13.5px var(--f);color:var(--text2);background:var(--card);border:1px solid var(--line);padding:9px 16px;border-radius:9px;cursor:pointer}
+.tab-btn.on{color:#fff;background:var(--accent);border-color:var(--accent)}
+.tab-pane{display:none}.tab-pane.on{display:block}
+.band{background:linear-gradient(180deg,var(--bg2),var(--bg));}
+.disclose{margin:38px 0 0;display:grid;gap:0}
+.disclose .row{display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line);padding:16px 0}
+.disclose .row:first-child{border-top:0}
+.disclose .h{color:var(--text);font-weight:600;font-size:15.5px;min-width:230px;flex-shrink:0}
+.disclose .b{color:var(--text2);font-size:14.5px}
+.disclose .b a{color:#7dd3fc}
+.note{margin:18px 0 0;border:1px solid var(--line2);background:var(--card2);border-radius:11px;padding:15px 17px;color:var(--text2);font-size:14px}
+.note b{color:var(--text)}
+@media(max-width:680px){.disclose .row{flex-direction:column;gap:4px}.disclose .h{min-width:0}}
+.start{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;margin:40px 0 0;align-items:start}
+@media(max-width:860px){.start{grid-template-columns:1fr}}
+.qs{list-style:none;display:grid;gap:16px;counter-reset:q}
+.qs li{display:flex;gap:14px;align-items:flex-start}
+.qs li::before{counter-increment:q;content:counter(q);flex-shrink:0;width:28px;height:28px;border-radius:8px;background:var(--accent-l);border:1px solid var(--line2);color:var(--accent);font:700 14px var(--m);display:grid;place-items:center}
+.qs b{color:var(--text);font-weight:600}.qs p{color:var(--text2);font-size:14px;margin:2px 0 0}
+.capture{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--card)}
+.capture h3{font-size:17px;font-weight:600}
+.capture p{color:var(--text2);font-size:14px;margin:8px 0 16px}
+.field{display:flex;gap:10px;flex-wrap:wrap}
+.field input{flex:1;min-width:180px;background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:12px 14px;color:var(--text);font:400 15px var(--f)}
+.field input:focus{outline:none;border-color:var(--accent)}
+.priceband{text-align:center;border:1px solid var(--line2);border-radius:16px;padding:40px 24px;margin:42px 0 0;background:radial-gradient(120% 130% at 50% 0%,rgba(59,130,246,.12),transparent 60%)}
+.priceband .big{font:700 30px var(--fd);color:var(--text);letter-spacing:-.02em}
+.priceband p{color:var(--text2);font-size:15.5px;margin:10px auto 22px;max-width:46ch}
+.faq details{border:1px solid var(--line);border-radius:12px;padding:4px 18px;margin:0 0 12px;background:var(--card)}
+.faq summary{font-family:var(--fd);font-weight:600;font-size:16.5px;color:var(--text);cursor:pointer;list-style:none;padding:16px 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--text3);font-weight:400;font-size:22px}
+.faq details[open] summary::after{content:"–"}
+.faq p{color:var(--text2);font-size:15px;padding:0 0 18px}
+.final{text-align:center;background:radial-gradient(100% 130% at 50% 0%,rgba(34,211,238,.1) 0%,transparent 60%)}
+.final h2{font-size:clamp(27px,3.6vw,42px)}
+.final p{max-width:52ch;margin:16px auto 0;color:var(--text2);font-size:17px}
+footer{border-top:1px solid var(--line);padding:48px 0 40px;color:var(--text3);font-size:13.5px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px;margin:0 0 32px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
+.foot-grid h4{font:600 12px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:0 0 12px}
+.foot-grid a{display:block;color:var(--text2);margin:0 0 8px;font-size:13.5px}
+.foot-grid a:hover{color:var(--text)}
+.foot-tag{color:var(--text2);font-size:14px;margin:10px 0 0;max-width:30ch}
+.foot-bottom{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:22px 0 0}
+.skip-link{position:absolute;left:8px;top:-40px;background:var(--card);padding:8px 12px;border-radius:8px;border:1px solid var(--line2);color:var(--text)}
+.skip-link:focus{top:8px}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<nav><div class="wrap nav">
+  <a class="brand" href="/"><img src="/assets/screenhand-logo-64.png" alt="">ScreenHand</a>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#tools">Tools</a>
+    <a href="/desktop/">Desktop</a>
+    <a href="#connect">Docs</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-primary" href="#start">Get your link</a>
+  </div>
+</div></nav>
+
+<main id="main">
+
+<header class="hero"><div class="wrap">
+  <span class="kicker">🖐 MCP-native Android control</span>
+  <h1>ScreenHand gives AI real hands on Android.</h1>
+  <p class="lead">Install one app on any Android phone, get a private link, and let your AI agent — or you — see the screen and tap, type, and swipe on real apps with real logins, from anywhere.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="#start">Get your link</a>
+    <a class="btn btn-ghost" href="#connect">Read the docs</a>
+  </div>
+  <div class="code">
+    <div class="code-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="code-title">connect your agent — Claude Code</span></div>
+    <pre><span class="c"># Add ScreenHand to any MCP client</span>
+<span class="k">claude</span> mcp add --transport http android \
+  <span class="u">https://mcp.screenhand.com/u/&lt;your-token&gt;/mcp</span></pre>
+  </div>
+  <p class="trust"><b>Works with Claude, Cursor, and any MCP client.</b> &nbsp;·&nbsp; A real device over the internet — built for reliability, not twitch-speed.</p>
+</div></header>
+
+<!-- PROBLEM -->
+<section id="problem"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Why this exists</div>
+    <h2>Mobile is where the apps are. Agents can't reach it.</h2>
+  </div>
+  <div class="grid g3">
+    <div class="card reveal"><span class="ic">🔌</span><h3>No APIs for mobile apps</h3><p>The important stuff — social, banking, delivery, logins — lives behind mobile apps with no API. Agents are locked out.</p></div>
+    <div class="card reveal"><span class="ic">📵</span><h3>Emulators aren't the real thing</h3><p>They lack real accounts and real apps, and trip anti-bot checks. For real work you need a real device.</p></div>
+    <div class="card reveal"><span class="ic">🎯</span><h3>Pixel automation is fragile</h3><p>Screenshot-and-guess taps break on every layout change and can't read what's actually on screen.</p></div>
+  </div>
+</div></section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="band"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">How it works</div>
+    <h2>A real phone, controllable from anywhere.</h2>
+  </div>
+  <div class="flow">
+    <div class="card reveal"><h3>Install ScreenHand</h3><p>Add the app to any Android device and enable it — guided setup: paste your link, turn on accessibility, done.</p></div>
+    <div class="card reveal"><h3>Get your private link</h3><p>Each device gets a secret, isolated URL. Your agent controls only <em>your</em> phone — nobody else's.</p></div>
+    <div class="card reveal"><h3>Connect &amp; go</h3><p>Point any MCP-compatible AI agent at the link, or open the live view in your browser and drive it by hand.</p></div>
+  </div>
+  <div class="diagram reveal">Your AI agent / browser <span class="ar">⇄</span> <b>mcp.screenhand.com</b> (secure tunnel) <span class="ar">⇄</span> Your Android phone &nbsp;&nbsp;·&nbsp;&nbsp; end-to-end over HTTPS</div>
+</div></section>
+
+<!-- FEATURES -->
+<section id="features"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Features</div>
+    <h2>Built to actually work on real devices.</h2>
+  </div>
+  <div class="grid g3">
+    <div class="card reveal"><span class="ic">👆</span><h3>Real taps &amp; gestures</h3><p>Genuine touch events through Android's accessibility layer — tap, long-press, swipe, drag, pinch, rotate. Not pixel guessing.</p></div>
+    <div class="card reveal"><span class="ic">⌨️</span><h3>Real typing</h3><p>A purpose-built keyboard sends true per-character input, so search-as-you-type and reactive fields actually fire.</p></div>
+    <div class="card reveal"><span class="ic">🧩</span><h3>Sees the screen, structurally</h3><p>Reads on-screen text and UI elements with their positions, so the agent knows what it's looking at.</p></div>
+    <div class="card reveal"><span class="ic">🔎</span><h3>On-device text recognition</h3><p>Reads text from anything — even canvas, WebView and games — using on-device OCR (Google ML Kit). No third-party OCR cloud.</p></div>
+    <div class="card reveal"><span class="ic">🛠️</span><h3>20 MCP tools, one URL</h3><p>A compact, intent-based tool surface — observe, tap, type, swipe, gesture, navigate, find, batch and more. Full power, nothing bloated.</p></div>
+    <div class="card reveal"><span class="ic">⏺️</span><h3>Macros — record once, replay free</h3><p>Record a flow, replay it over a list of inputs, export to CSV. Deterministic, with no AI cost per run.</p></div>
+    <div class="card reveal"><span class="ic">🔐</span><h3>Token-isolated</h3><p>Every device sits behind its own secret link — invalid links see nothing, and one link can't reach another person's device.</p></div>
+    <div class="card reveal"><span class="ic">🖥️</span><h3>Live browser view</h3><p>Watch the device and click-to-tap from any browser, on the same connection — no extra setup.</p></div>
+  </div>
+</div></section>
+
+<!-- TOOLS -->
+<section id="tools" class="band"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">MCP tools</div>
+    <h2>One link. A full toolset for your agent.</h2>
+    <p>ScreenHand speaks the Model Context Protocol, so any MCP client gets the whole toolset automatically. <span class="pill">20 tools</span></p>
+  </div>
+  <div class="tools reveal">
+    <span class="tool">observe <span>· see screen</span></span>
+    <span class="tool">tap</span>
+    <span class="tool">type</span>
+    <span class="tool">swipe</span>
+    <span class="tool">gesture <span>· pinch/rotate</span></span>
+    <span class="tool">navigate <span>· open app/URL</span></span>
+    <span class="tool">find <span>· wait/scroll to</span></span>
+    <span class="tool">key</span>
+    <span class="tool">clipboard</span>
+    <span class="tool">file</span>
+    <span class="tool">batch</span>
+    <span class="tool">run_macro</span>
+    <span class="tool">record_macro</span>
+  </div>
+  <p class="note reveal"><b>Honest note on speed:</b> ScreenHand drives a real device over the internet on a poll loop. It's built for <b>reliability and realness</b> — perfect for app workflows, data pulls, QA and agent tasks — not for real-time, twitch-speed games.</p>
+</div></section>
+
+<!-- USE CASES -->
+<section id="usecases"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Use cases</div>
+    <h2>What people build with it.</h2>
+  </div>
+  <div class="grid g3">
+    <div class="card reveal"><h3>Automate any mobile app</h3><p>Do on a phone what no API lets you — drive the apps directly.</p></div>
+    <div class="card reveal"><h3>Pull mobile-only data</h3><p>Read and export what only exists inside the app, straight to CSV.</p></div>
+    <div class="card reveal"><h3>Social &amp; growth ops</h3><p>Run repeatable flows across accounts. <em>Keep within each platform's terms of service.</em></p></div>
+    <div class="card reveal"><h3>App QA &amp; testing</h3><p>Drive your own app on a real device, remotely and repeatably.</p></div>
+    <div class="card reveal"><h3>Agent workflows</h3><p>Give an autonomous agent a phone as a first-class tool.</p></div>
+    <div class="card reveal"><h3>Remote device control</h3><p>Operate your own device from anywhere, by hand, in the browser.</p></div>
+  </div>
+</div></section>
+
+<!-- DESKTOP -->
+<section id="desktop" class="band"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">One agent, two surfaces</div>
+    <h2>One agent. Your phone <em>and</em> your computer.</h2>
+    <p>ScreenHand also gives AI native control of the <b>desktop</b> — macOS and Windows apps through the OS accessibility layer, with the full MCP toolset. Same idea, bigger screen.</p>
+  </div>
+  <div class="cta-row reveal">
+    <a class="btn btn-primary" href="/desktop/">Explore desktop</a>
+    <a class="btn btn-ghost" href="https://github.com/manushi4/Screenhand" rel="noopener">GitHub</a>
+  </div>
+</div></section>
+
+<!-- CONNECT / CODE -->
+<section id="connect"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Integration</div>
+    <h2>Connect in one line.</h2>
+    <p>Point any MCP client at your link and the whole toolset loads automatically.</p>
+  </div>
+  <div class="tabs reveal">
+    <div class="tab-btns">
+      <button class="tab-btn on" data-tab="cc">Claude Code</button>
+      <button class="tab-btn" data-tab="cd">Config JSON</button>
+      <button class="tab-btn" data-tab="st">Any stdio client</button>
+    </div>
+    <div class="tab-pane on" data-pane="cc"><div class="code"><div class="code-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="code-title">terminal</span></div><pre><span class="k">claude</span> mcp add --transport http android <span class="u">https://mcp.screenhand.com/u/&lt;token&gt;/mcp</span></pre></div></div>
+    <div class="tab-pane" data-pane="cd"><div class="code"><div class="code-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="code-title">claude_desktop_config.json</span></div><pre>{
+  <span class="k">"mcpServers"</span>: {
+    <span class="k">"android"</span>: {
+      <span class="k">"type"</span>: "http",
+      <span class="k">"url"</span>: <span class="u">"https://mcp.screenhand.com/u/&lt;token&gt;/mcp"</span>
+    }
+  }
+}</pre></div></div>
+    <div class="tab-pane" data-pane="st"><div class="code"><div class="code-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="code-title">terminal</span></div><pre><span class="k">npx</span> -y mcp-remote <span class="u">https://mcp.screenhand.com/u/&lt;token&gt;/mcp</span></pre></div></div>
+  </div>
+</div></section>
+
+<!-- SECURITY & DATA -->
+<section id="security" class="band"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Security &amp; data</div>
+    <h2>Token-isolated — and clear about where your screen goes.</h2>
+    <p>We tell you exactly what's true, and exactly what leaves the device. No "your data stays private" theatre.</p>
+  </div>
+  <div class="disclose reveal">
+    <div class="row"><div class="h">Token isolation</div><div class="b">Each device sits behind its own secret link. Invalid links see nothing, and one link can't reach another device.</div></div>
+    <div class="row"><div class="h">Encrypted in transit</div><div class="b">All connections use HTTPS/TLS end-to-end.</div></div>
+    <div class="row"><div class="h">You're in control</div><div class="b">You explicitly enable ScreenHand and consent before it turns on, and you can stop the worker or disable accessibility at any time.</div></div>
+    <div class="row"><div class="h">On-device text recognition</div><div class="b">OCR runs on the phone (Google ML Kit) — no third-party OCR cloud.</div></div>
+    <div class="row"><div class="h">Where your screen goes (read this)</div><div class="b">ScreenHand <b>relays your screen contents over the internet to whatever AI agent / provider you connect it to</b>. It is <b>not local-only</b>, and it is <b>not private from the provider you choose</b> — those screen contents and OCR results reach that provider so it can decide actions. Only run it on a device, and view content, you're comfortable sharing with the agent you connect. <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>.</div></div>
+  </div>
+</div></section>
+
+<!-- GET STARTED -->
+<section id="start"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Get started</div>
+    <h2>Get your link and connect in minutes.</h2>
+    <p>Free during beta. Request your private link and we'll get you set up.</p>
+  </div>
+  <div class="start">
+    <ol class="qs reveal">
+      <li><div><b>Request your link</b><p>Drop your email — we mint a private, device-isolated link for you during the beta.</p></div></li>
+      <li><div><b>Install the app &amp; paste your link</b><p>Add ScreenHand to your Android device and follow the guided setup — accessibility, keyboard, battery.</p></div></li>
+      <li><div><b>Connect your agent</b><p>Use the one-line snippet for Claude, Cursor or any MCP client — or open the live browser view and drive by hand.</p></div></li>
+    </ol>
+    <div class="capture reveal">
+      <h3>Request your beta link</h3>
+      <p>Tell us a bit about what you'd automate and we'll send your link.</p>
+      <form class="field" action="mailto:singhaldeoli106@gmail.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="you@company.com" aria-label="Email" required>
+        <button class="btn btn-primary" type="submit">Get your link</button>
+      </form>
+      <p style="margin:14px 0 0;font-size:12.5px;color:var(--text3)">Or email <a href="mailto:singhaldeoli106@gmail.com?subject=ScreenHand%20Android%20beta%20link&body=What%20I'd%20automate%3A%0A%0ADevice%2FAndroid%20version%3A%0A">singhaldeoli106@gmail.com</a> directly. Two builds: <b>ScreenHand Remote</b> (human-driven, app stores) and <b>ScreenHand Agent</b> (autonomous, direct APK).</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- PRICING -->
+<section id="pricing" class="band"><div class="wrap">
+  <div class="priceband reveal">
+    <div class="big">Free during beta</div>
+    <p>Get your link and start now — no card. Pricing comes later, once reliability is hardened on real devices.</p>
+    <a class="btn btn-primary" href="#start">Get your link</a>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section id="faq"><div class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">FAQ</div><h2>Straight answers.</h2></div>
+  <div class="faq" style="margin-top:36px">
+    <details open><summary>Does it need root?</summary><p>No. It uses Android's standard Accessibility Service — no root, and no PC needed after setup.</p></details>
+    <details><summary>Which devices?</summary><p>Any Android phone or tablet on Android 9 or newer.</p></details>
+    <details><summary>Is it safe — can it control other phones?</summary><p>It controls only the device you install it on, behind a secret link. You enable it and can disable it anytime. It's for devices you own or are authorized to use.</p></details>
+    <details><summary>Real device or emulator?</summary><p>A real device — that's the whole point. Real apps, real logins, no anti-bot tripwires from emulation.</p></details>
+    <details><summary>Why does it need the accessibility permission?</summary><p>That's how it reads the screen and performs taps. We disclose this and ask for consent before enabling. Your screen contents are relayed to the AI provider you connect — see <a href="/privacy/">Privacy</a>. We never sell your data.</p></details>
+    <details><summary>Which AI agents work?</summary><p>Any MCP-compatible client — Claude Code, Claude Desktop, Cursor and others.</p></details>
+    <details><summary>Is it on the Play Store?</summary><p>The human-driven "Remote" build targets the Play and Galaxy stores; the full autonomous "Agent" build is a direct APK download.</p></details>
+    <details><summary>Does running macros cost AI tokens?</summary><p>No — recorded macros replay deterministically on the device with no AI cost per run.</p></details>
+  </div>
+</div></section>
+
+<!-- FINAL -->
+<section class="final"><div class="wrap">
+  <h2>Put a real Android phone in your agent's hands.</h2>
+  <p>Free during beta. Request your private link and connect any MCP client in one line.</p>
+  <div class="cta-row" style="justify-content:center;margin-top:28px">
+    <a class="btn btn-primary" href="#start">Get your link</a>
+    <a class="btn btn-ghost" href="#connect">Read the docs</a>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <a class="brand" href="/"><img src="/assets/screenhand-logo-64.png" alt="" style="width:24px;height:24px">ScreenHand</a>
+      <p class="foot-tag">AI hands for Android — and your desktop. One agent, every screen.</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <a href="#features">Features</a>
+      <a href="#tools">Tools</a>
+      <a href="/desktop/">Desktop</a>
+      <a href="#start">Get your link</a>
+    </div>
+    <div>
+      <h4>Developers</h4>
+      <a href="#connect">Docs / MCP setup</a>
+      <a href="https://github.com/manushi4/Screenhand" rel="noopener">GitHub</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="mailto:singhaldeoli106@gmail.com">Contact</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div>© 2026 Clazro Technology Private Limited · ScreenHand</div>
+    <div>Built for MCP · Works with Claude, Cursor &amp; any MCP client</div>
+  </div>
+</div></footer>
+
+<script>
+// tab switcher
+document.querySelectorAll('.tab-btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.getAttribute('data-tab');
+    document.querySelectorAll('.tab-btn').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.tab-pane').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-pane')===t)});
+  });
+});
+// reveal on scroll
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScreenHand — Tell your Mac what to do. Watch it do it.</title>
+<meta name="description" content="ScreenHand is a Mac assistant that reads your screen, plans the steps, and operates real apps — Mail, Notes, Calendar, Safari — to finish multi-step tasks you describe in plain English. Supervised, Mac-only, bring-your-own-AI-key. A pre-release paid beta for power users.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://screenhand.com/desktop/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ScreenHand — Tell your Mac what to do. Watch it do it.">
+<meta property="og:description" content="A Mac assistant that operates your real apps to finish multi-step tasks you describe in plain English. Supervised, Mac-only, BYO AI key. Pre-release beta.">
+<meta property="og:image" content="/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ScreenHand",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "macOS",
+  "description": "A Mac assistant that reads your screen, plans the steps, and operates real apps to finish multi-step tasks described in plain English. Supervised, bring-your-own-AI-key, pre-release beta.",
+  "offers": { "@type": "Offer", "category": "Paid beta" },
+  "publisher": { "@type": "Organization", "name": "Clazro Technology Private Limited" }
+}
+</script>
+<style>
+:root{
+  --white:#ffffff;--bg:#fafbfc;--bg2:#f4f6f9;--line:#e6e9ef;
+  --dark:#0a0f1e;--dark2:#161c33;
+  --text:#0f1626;--text2:#4b5563;--text3:#8a93a4;
+  --blue:#2563eb;--blue-l:#e7efff;--blue-d:#1d4ed8;
+  --cyan:#06b6d4;--violet:#7c3aed;--violet-l:#efe9fe;
+  --emerald:#059669;--emerald-l:#e2f5ec;--amber:#b45309;--amber-l:#fdf1dd;--rose:#e11d48;
+  --f:'Inter',system-ui,-apple-system,sans-serif;
+  --fd:'Space Grotesk',sans-serif;
+  --m:'JetBrains Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --maxw:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--white);color:var(--text);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--blue);text-decoration:none;transition:color .15s}a:hover{color:var(--blue-d)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--fd);line-height:1.12;letter-spacing:-.02em;color:var(--dark)}
+.eyebrow{font:600 13px/1 var(--m);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.muted{color:var(--text2)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;transition:transform .15s var(--ease),box-shadow .15s}
+.btn-primary{background:var(--dark);color:#fff;box-shadow:0 6px 20px -8px rgba(10,15,30,.5)}
+.btn-primary:hover{color:#fff;transform:translateY(-2px);box-shadow:0 12px 28px -10px rgba(10,15,30,.55)}
+.btn-ghost{color:var(--text);border:1px solid var(--line);background:var(--white)}
+.btn-ghost:hover{color:var(--text);border-color:var(--text3)}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font:700 19px var(--fd);color:var(--dark);letter-spacing:-.01em}
+.brand img{width:28px;height:28px;border-radius:7px}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:500}
+.nav-links a{color:var(--text2)}.nav-links a:hover{color:var(--text)}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+.hero{padding:84px 0 64px;background:radial-gradient(120% 90% at 70% -10%,var(--blue-l) 0%,transparent 55%)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0}
+.badge{font:500 12.5px var(--m);color:var(--text2);background:var(--bg2);border:1px solid var(--line);padding:5px 11px;border-radius:999px}
+.hero h1{font-size:clamp(34px,5.4vw,58px);font-weight:700;max-width:18ch}
+.hero p.lead{font-size:clamp(17px,2.1vw,20px);color:var(--text2);max-width:60ch;margin:22px 0 0}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 0;align-items:center}
+.cta-note{font-size:13px;color:var(--text3)}
+.win{margin:54px 0 0;border-radius:14px;border:1px solid var(--line);background:#fff;box-shadow:0 30px 70px -30px rgba(10,15,30,.28);overflow:hidden}
+.win-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--bg2);border-bottom:1px solid var(--line)}
+.dot{width:11px;height:11px;border-radius:50%}.r{background:#ff5f57}.y{background:#ffbd2e}.g{background:#28c840}
+.win-title{margin-left:10px;font:500 12.5px var(--m);color:var(--text3)}
+.win-body{padding:22px 22px 24px;font-family:var(--m);font-size:13.5px}
+.chat-u{color:var(--text);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:11px 14px;display:inline-block}
+.steps{margin:16px 0 0;list-style:none;display:grid;gap:9px}
+.steps li{display:flex;gap:10px;color:var(--text2);align-items:flex-start}
+.tick{color:var(--emerald);font-weight:700}
+.gate{margin:16px 0 0;border:1px solid var(--amber);background:var(--amber-l);border-radius:10px;padding:12px 14px;color:#5a3c08;font-size:12.5px}
+section{padding:76px 0}
+.sec-head{max-width:62ch}
+.sec-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:700;margin:12px 0 0}
+.sec-head p{color:var(--text2);font-size:17px;margin:14px 0 0}
+.grid{display:grid;gap:18px;margin:40px 0 0}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--white);transition:border-color .15s,transform .15s var(--ease)}
+.card:hover{border-color:#cdd4df;transform:translateY(-3px)}
+.card h3{font-size:18px;font-weight:600}
+.card p{color:var(--text2);font-size:14.5px;margin:9px 0 0}
+.kw{font:600 12px var(--m);color:var(--blue);letter-spacing:.04em;text-transform:uppercase}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0 0;counter-reset:s}
+@media(max-width:860px){.flow{grid-template-columns:1fr}}
+.flow .card::before{counter-increment:s;content:"0" counter(s);font:700 13px var(--m);color:var(--text3);display:block;margin:0 0 8px}
+.band{background:var(--dark);color:#dfe4ee}
+.band h2{color:#fff}
+.band .sec-head p{color:#aeb6c8}
+.honest{display:grid;gap:0;margin:38px 0 0}
+.honest-item{display:flex;gap:14px;align-items:flex-start;border-top:1px solid #243049;padding:16px 0}
+.honest-item:first-child{border-top:0}
+.honest-item .h{color:#fff;font-weight:600;font-size:15.5px;min-width:210px;flex-shrink:0}
+.honest-item .b{color:#aeb6c8;font-size:14.5px}
+.honest-item .b a{color:#9ec2ff}
+@media(max-width:680px){.honest-item{flex-direction:column;gap:4px}.honest-item .h{min-width:0}}
+.faq details{border:1px solid var(--line);border-radius:12px;padding:4px 18px;margin:0 0 12px;background:var(--white)}
+.faq summary{font-family:var(--fd);font-weight:600;font-size:16.5px;color:var(--dark);cursor:pointer;list-style:none;padding:16px 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--text3);font-weight:400;font-size:22px}
+.faq details[open] summary::after{content:"–"}
+.faq p{color:var(--text2);font-size:15px;padding:0 0 18px}
+.final{text-align:center;background:radial-gradient(100% 120% at 50% 0%,var(--violet-l) 0%,transparent 60%)}
+.final h2{font-size:clamp(26px,3.6vw,40px)}
+.final p{max-width:54ch;margin:16px auto 0;color:var(--text2);font-size:17px}
+footer{border-top:1px solid var(--line);padding:42px 0;color:var(--text3);font-size:13.5px}
+.foot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+.foot a{color:var(--text2)}
+.skip-link{position:absolute;left:8px;top:-40px;background:#fff;padding:8px 12px;border-radius:8px;border:1px solid var(--line)}
+.skip-link:focus{top:8px}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<nav><div class="wrap nav">
+  <a class="brand" href="/"><img src="/assets/screenhand-logo-64.png" alt="">ScreenHand</a>
+  <div class="nav-links">
+    <a href="/">← Android</a>
+    <a href="#how">How it works</a>
+    <a href="#today">What works today</a>
+    <a href="#honest">The honest part</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-primary" href="mailto:singhaldeoli106@gmail.com?subject=ScreenHand%20beta%20access">Request access</a>
+  </div>
+</div></nav>
+
+<main id="main">
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">macOS desktop agent · pre-release beta</div>
+  <h1>Tell your Mac what to do. Watch it do it.</h1>
+  <p class="lead">ScreenHand reads your screen, plans the steps, and operates your real apps — Mail, Notes, Calendar, Safari — to finish multi-step tasks you describe in plain English. You supervise; it works.</p>
+  <div class="badges">
+    <span class="badge">macOS only</span>
+    <span class="badge">Bring your own AI key</span>
+    <span class="badge">Supervised — you stay in control</span>
+    <span class="badge">Paid beta · invite-based</span>
+  </div>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="mailto:singhaldeoli106@gmail.com?subject=ScreenHand%20beta%20access">Request beta access</a>
+    <a class="btn btn-ghost" href="#how">See how it works</a>
+    <span class="cta-note">No public installer or billing yet — early access is invite-based while we harden reliability.</span>
+  </div>
+
+  <div class="win" aria-hidden="true">
+    <div class="win-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="win-title">ScreenHand — run</span></div>
+    <div class="win-body">
+      <span class="chat-u">&gt; Pull today's calendar into a briefing note</span>
+      <ul class="steps">
+        <li><span class="tick">✓</span> Read 4 events from Calendar (09:00–17:30)</li>
+        <li><span class="tick">✓</span> Created Apple Note "Today's Briefing 2026-06-12"</li>
+        <li><span class="tick">✓</span> Verified the note exists with the right title</li>
+      </ul>
+      <div class="gate">⚠ Approval required — a step wants to run a script. ScreenHand shows you the exact script and waits for <b>Approve</b> / <b>Deny</b> before it runs.</div>
+    </div>
+  </div>
+</div></header>
+
+<section id="how"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">How it works</div>
+    <h2>It uses your apps the way you would — just faster, and it doesn't forget a step.</h2>
+    <p>No per-app integrations, no scripting, no brittle pixel coordinates. You describe the outcome; ScreenHand figures out the clicks and the typing.</p>
+  </div>
+  <div class="flow">
+    <div class="card"><h3>You describe it</h3><p>Type a goal in plain English — "find the latest email from Priya and save it as a note."</p></div>
+    <div class="card"><h3>It sees the screen</h3><p>It reads the accessibility tree and screenshots to understand what's actually in front of it.</p></div>
+    <div class="card"><h3>It plans &amp; acts</h3><p>It plans the steps, then clicks, types, and navigates real apps — recovering when something shifts.</p></div>
+    <div class="card"><h3>It verifies</h3><p>It checks the result actually happened, instead of assuming success.</p></div>
+  </div>
+</div></section>
+
+<section id="today" style="background:var(--bg)"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">What works today</div>
+    <h2>A handful of real workflows we've proven — not "automate anything."</h2>
+    <p>We'd rather ship a few things that work reliably than promise everything. These run on the apps macOS exposes well. New ones are added only after they clear a hard reliability bar.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card"><div class="kw">Mail → Notes</div><h3>Capture an email as a note</h3><p>Find the latest message and save its subject and sender into Apple Notes.</p></div>
+    <div class="card"><div class="kw">Calendar</div><h3>Daily briefing note</h3><p>Read today's events and assemble a clean briefing in Notes.</p></div>
+    <div class="card"><div class="kw">Mail</div><h3>Inbox triage</h3><p>Sort unread mail into a morning standup note — urgent, follow-up, informational.</p></div>
+    <div class="card"><div class="kw">Research → Notes</div><h3>Research and save</h3><p>Search the web on a topic and drop a sourced summary into Notes.</p></div>
+  </div>
+</div></section>
+
+<section id="safety"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">Supervised by design</div>
+    <h2>An agent that controls your machine should be one you can stop.</h2>
+    <p>The constraints are the product. ScreenHand is built to be watched, interrupted, and trusted — not to run loose.</p>
+  </div>
+  <div class="grid g3">
+    <div class="card"><h3>Approve every script</h3><p>Before it runs any generated script, it shows you the exact code and waits for your Approve or Deny.</p></div>
+    <div class="card"><h3>Instant kill switch</h3><p>One hotkey stops a run mid-flight — even when another app has focus.</p></div>
+    <div class="card"><h3>Won't run away with your bill</h3><p>A per-run cost cap stops the agent before it burns through your AI budget.</p></div>
+    <div class="card"><h3>Asks before destructive actions</h3><p>Deleting, sending, or overwriting prompts you first — nothing irreversible happens silently.</p></div>
+    <div class="card"><h3>Your keys, your machine</h3><p>You bring your own Claude or Gemini key; it runs on your Mac, not our servers.</p></div>
+    <div class="card"><h3>It verifies its own work</h3><p>Every run is checked against the real result, so "done" means done — not "the agent thinks so."</p></div>
+  </div>
+</div></section>
+
+<section id="honest" class="band"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow" style="color:#9ec2ff">The honest part</div>
+    <h2>What you should know before you ask for access.</h2>
+    <p>We'd rather you trust us than be surprised. Here's the unvarnished state of things.</p>
+  </div>
+  <div class="honest">
+    <div class="honest-item"><div class="h">It's a supervised beta</div><div class="b">Pre-release software running an autonomous agent on your Mac. You watch it. It's reliable on the proven workflows and best-effort beyond them — it will sometimes fail. Not for unattended, mission-critical use.</div></div>
+    <div class="honest-item"><div class="h">Your screen goes to a cloud AI</div><div class="b">To understand the screen, ScreenHand sends screenshots and on-screen text to the AI provider you choose (e.g. Anthropic Claude or Google Gemini). We disclose this and ask for consent — we don't hide it. <a href="/privacy/">Read the privacy details</a>.</div></div>
+    <div class="honest-item"><div class="h">Mac only, for now</div><div class="b">macOS on Apple Silicon. Windows and tool-specific (engineering) support are on the roadmap, not in this beta.</div></div>
+    <div class="honest-item"><div class="h">Bring your own AI key</div><div class="b">You supply and pay for your own Claude/Gemini API key. There's no hosted inference and no free tier in the beta.</div></div>
+    <div class="honest-item"><div class="h">It needs real permissions</div><div class="b">Accessibility, Screen Recording, and app automation — the access a power-user automation tool needs. You grant them; you can revoke them anytime.</div></div>
+  </div>
+</div></section>
+
+<section id="faq" style="background:var(--bg)"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">FAQ</div><h2>Straight answers.</h2></div>
+  <div class="faq" style="margin-top:36px">
+    <details open><summary>Is this fully autonomous — can I set it and forget it?</summary><p>No. It's supervised by design. You run it and watch it, and it pauses for your approval before running scripts or doing anything destructive. Treat it as a fast assistant you oversee, not a hands-off robot.</p></details>
+    <details><summary>Can it automate any app?</summary><p>No — and we won't claim it. It's reliable on a small set of proven Mac workflows today (Mail, Notes, Calendar, Safari) and best-effort elsewhere. We add new workflows only after they clear a strict reliability bar.</p></details>
+    <details><summary>Is my data private?</summary><p>Your screen contents are sent to the cloud AI provider you choose so it can read the screen — that's how it works, and we disclose it up front. It runs on your machine with your key; we don't run inference or store your screen on our servers. See the <a href="/privacy/">privacy details</a>.</p></details>
+    <details><summary>How much does it cost?</summary><p>The beta is invite-based and paid; pricing is being finalized. You also pay your own AI provider for the API usage (bring your own key).</p></details>
+    <details><summary>Windows? CANoe / MATLAB / engineering tools?</summary><p>Roadmap, not beta. The current product is Mac-only on consumer apps. Tell us your use case when you request access — it helps us prioritize.</p></details>
+    <details><summary>Who builds this?</summary><p>Clazro Technology Private Limited. It's early, it's honest, and it's improving fast.</p></details>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Want in while it's early?</h2>
+  <p>Access is invite-based while we harden reliability on real machines. Tell us what you'd automate and we'll be in touch.</p>
+  <div class="cta-row" style="justify-content:center;margin-top:28px">
+    <a class="btn btn-primary" href="mailto:singhaldeoli106@gmail.com?subject=ScreenHand%20beta%20access&body=What%20I'd%20automate%3A%0A%0AMy%20Mac%20%2B%20setup%3A%0A">Request beta access</a>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap foot">
+  <div>© 2026 Clazro Technology Private Limited · ScreenHand</div>
+  <div style="display:flex;gap:18px">
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
+    <a href="mailto:singhaldeoli106@gmail.com">Contact</a>
+  </div>
+</div></footer>
+
+</body>
+</html>

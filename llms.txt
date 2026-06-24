@@ -1,0 +1,33 @@
+# ScreenHand for Android
+
+> Give your AI agent real hands on a real Android phone. Install one app, get a private link, and let an MCP-compatible AI agent (or you, in a browser) see the screen and tap, type, and swipe on real apps with real logins — over the internet.
+
+ScreenHand is a remote Android control surface that speaks the Model Context Protocol. A lightweight app runs on the device (using Android's Accessibility Service), exposes a private tokenized URL, and any MCP client connects to drive the phone. Built by Clazro Technology Private Limited.
+
+## Key Facts
+
+- Android 9+ device. Standard Accessibility Service — no root, no PC needed after setup.
+- MCP-native: connect Claude Code, Claude Desktop, Cursor, or any MCP client at `https://mcp.screenhand.com/u/<token>/mcp`. 20 tools.
+- Real input: genuine taps, typing, swipe, drag, pinch, rotate through the accessibility layer — not pixel guessing. A purpose-built keyboard sends true per-character input.
+- On-device OCR (Google ML Kit) reads text from anything, including canvas/WebView/games. No third-party OCR cloud.
+- Macros: record a flow once and replay it deterministically with no AI cost per run; export to CSV.
+- Token isolation: each device sits behind its own secret link; invalid links see nothing.
+- A real device over the internet on a poll loop — built for reliability and realness, NOT real-time/twitch-speed control.
+
+## Honest disclosure
+
+- Screen contents (and OCR results) are relayed over the internet to whatever AI provider you connect. It is NOT local-only and NOT private from that provider. We say "token-isolated," never "private."
+- Free during beta. Request a private link by email.
+
+## Two builds
+
+- ScreenHand Remote — human-driven remote control (Play / Galaxy Store).
+- ScreenHand Agent — full autonomous AI agent (direct APK download).
+
+## Also: Desktop
+
+- ScreenHand also controls macOS/Windows desktops via the OS accessibility layer with the full MCP toolset. See /desktop/. "One agent. Your phone and your computer."
+
+## Access
+
+Free beta, invite-based while reliability is hardened. Request a link: singhaldeoli106@gmail.com

@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Terms of Service — ScreenHand</title><meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--white:#fff;--bg2:#f4f6f9;--line:#e6e9ef;--dark:#0a0f1e;--text:#0f1626;--text2:#4b5563;--text3:#8a93a4;--blue:#2563eb;--amber:#b45309;--amber-l:#fdf1dd;--f:'Inter',system-ui,sans-serif;--fd:'Space Grotesk',sans-serif;--m:'JetBrains Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--f);color:var(--text);line-height:1.65;background:var(--white)}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1080px;margin:0 auto;padding:0 24px}
+.brand{display:flex;align-items:center;gap:9px;font:700 18px var(--fd);color:var(--dark)}.brand img{width:26px;height:26px;border-radius:6px}
+.draft{background:var(--amber-l);border:1px solid var(--amber);color:#5a3c08;border-radius:11px;padding:13px 16px;margin:30px 0 8px;font-size:13.5px}
+main{padding:14px 0 70px}
+h1{font-family:var(--fd);font-size:32px;letter-spacing:-.02em;margin:26px 0 6px;color:var(--dark)}
+h2{font-family:var(--fd);font-size:22px;letter-spacing:-.01em;margin:34px 0 8px;color:var(--dark);padding-top:8px;border-top:1px solid var(--line)}
+h3{font-family:var(--fd);font-size:17px;margin:22px 0 6px;color:var(--dark)}
+h4{font-size:15px;font-weight:600;margin:16px 0 4px}
+p{margin:10px 0;color:var(--text2)}strong{color:var(--text)}
+code{font-family:var(--m);font-size:.9em;background:var(--bg2);padding:2px 5px;border-radius:5px}
+ul,ol{margin:10px 0 10px 22px;color:var(--text2)}li{margin:5px 0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+td{border:1px solid var(--line);padding:8px 10px;color:var(--text2);vertical-align:top}
+tr:first-child td{background:var(--bg2);font-weight:600;color:var(--text)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--text3);font-size:13px}
+.foot{display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap}.foot a{color:var(--text2)}
+</style></head><body>
+<nav><div class="nav"><a class="brand" href="/"><img src="/assets/screenhand-logo-64.png" alt="">ScreenHand</a><a href="/" style="font-size:14px;color:var(--text2)">← Back to home</a></div></nav>
+<main><div class="wrap">
+<div class="draft"><strong>Draft — beta.</strong> This document describes current pre-release behavior and is pending review by qualified counsel. It is not final and not legal advice. Questions: <a href="mailto:singhaldeoli106@gmail.com">singhaldeoli106@gmail.com</a>.</div>
+<p>&gt; <strong>DRAFT — NOT LEGAL ADVICE — requires review by a qualified software/IP + privacy lawyer before use.</strong></p>
+<p>&gt; This document is a first draft for lawyer redline. No clause herein has been reviewed for enforceability in any jurisdiction. Do not publish or rely on this without qualified legal review.</p>
+<hr>
+<h1>End-User License Agreement and Terms of Service</h1>
+<p><strong>Clazro Technology Private Limited</strong></p>
+<p>Product: Khushi desktop agent (macOS)</p>
+<p>Version: Beta</p>
+<p>Last updated: [DATE — lawyer to insert before publishing]</p>
+<hr>
+<h2>1. Parties and Acceptance</h2>
+<p>This End-User License Agreement and Terms of Service ("Agreement") is between <strong>Clazro Technology Private Limited</strong>, a company incorporated under the laws of India ("Clazro," "we," "us"), and the individual who installs or uses the Khushi desktop agent ("you," "User").</p>
+<p><strong>By clicking "I Accept," completing installation, or using the Software, you agree to this Agreement in full.</strong> If you do not agree, do not install or use the Software.</p>
+<p>If you are accepting on behalf of an organisation, you represent that you have authority to bind that organisation to this Agreement.</p>
+<hr>
+<h2>2. Definitions</h2>
+<ul>
+<li><strong>Software</strong>: the Khushi macOS application, including all versions, updates, and associated documentation.</li>
+<li><strong>Beta</strong>: a pre-release version of the Software provided under these terms.</li>
+<li><strong>Agent Action</strong>: any action the Software takes autonomously on your behalf, including but not limited to sending emails or messages, creating, modifying, or deleting files or calendar entries, running scripts, clicking UI elements, and submitting forms.</li>
+<li><strong>AI Provider</strong>: a third-party large-language-model API service (e.g., Anthropic via AWS Bedrock, Anthropic API, Google Gemini, OpenAI) to which the Software sends screen data and receives instructions.</li>
+<li><strong>BYOK Key</strong>: an API key for an AI Provider that you supply to the Software.</li>
+<li><strong>Output</strong>: any text, decision, action plan, or Agent Action produced by the AI Provider in response to data sent by the Software.</li>
+</ul>
+<hr>
+<h2>3. License Grant</h2>
+<p>Subject to your compliance with this Agreement, Clazro grants you a <strong>limited, non-exclusive, non-transferable, non-sublicensable, revocable</strong> licence to install and use one copy of the Software on one Mac computer that you own or control, solely for your personal or internal business evaluation purposes during the Beta period.</p>
+<p>All rights not expressly granted are reserved by Clazro. Nothing in this Agreement transfers any intellectual property right in the Software to you.</p>
+<h3>3.1 Intellectual Property Ownership</h3>
+<p>The Software, including all source code, object code, algorithms, models, interfaces, documentation, trade secrets, and related materials, is and remains the exclusive property of Clazro Technology Private Limited and its licensors. You acquire no ownership interest of any kind.</p>
+<h3>3.2 Restrictions</h3>
+<p>You may not:</p>
+<p>(a) copy, modify, adapt, translate, or create derivative works of the Software;</p>
+<p>(b) reverse engineer, decompile, disassemble, or otherwise attempt to derive the Software's source code, except to the extent expressly permitted by applicable law that cannot be waived;</p>
+<p>(c) attempt to extract, derive, or reconstruct the weights, parameters, or architecture of any AI model accessed through the Software (see also Section 9);</p>
+<p>(d) sell, sublicense, rent, lease, lend, or distribute the Software or access to it;</p>
+<p>(e) remove or obscure any proprietary notice in the Software;</p>
+<p>(f) use the Software for any purpose prohibited by Section 10 (Acceptable Use).</p>
+<hr>
+<h2>4. Beta Disclaimer</h2>
+<p><strong>READ CAREFULLY. THE SOFTWARE IS PROVIDED AS A PRE-RELEASE BETA.</strong></p>
+<p>4.1 The Beta may contain bugs, errors, and incomplete features. It has not undergone the full testing that a production release would receive.</p>
+<p>4.2 <strong>Features may change or be removed without notice.</strong> Beta functionality does not represent a commitment to include those features in any future release.</p>
+<p>4.3 <strong>Risk of data loss.</strong> The Software can autonomously delete files, send communications, and modify application data. Beta software may behave unexpectedly. You may lose data. You are solely responsible for maintaining backups.</p>
+<p>4.4 <strong>Not for production or mission-critical use.</strong> Do not use the Software to control systems or perform tasks where an error could cause harm to persons, significant financial loss, legal liability, or loss of irreplaceable data.</p>
+<p>4.5 <strong>No SLA.</strong> Clazro makes no commitment regarding uptime, availability, response time, or support for Beta software.</p>
+<p>4.6 <strong>Beta may be terminated.</strong> Clazro may terminate the Beta programme or your access to it at any time, for any reason, with or without notice.</p>
+<p>4.7 <strong>Beta pricing is not final pricing.</strong> Any price charged for Beta access does not represent the price of any future release. Clazro may change pricing at any time.</p>
+<hr>
+<h2>5. Automated Agent Actions — User Assumes Risk</h2>
+<p>&gt; <strong>THE FOLLOWING SECTION WILL BE DISPLAYED AS A SEPARATE PROMINENT ACKNOWLEDGMENT AT INSTALL TIME. YOU MUST AFFIRMATIVELY CHECK A BOX TO PROCEED.</strong></p>
+<p><strong>5.1 Acknowledgment of Real-World, Potentially Irreversible Actions.</strong></p>
+<p>You acknowledge and agree that:</p>
+<p>(a) The Software is an autonomous agent that takes <strong>real-world actions</strong> in applications on your computer, including but not limited to:</p>
+<ul>
+<li>sending emails, messages, and other communications to third parties;</li>
+<li>creating, modifying, moving, or <strong>permanently deleting files and directories</strong>;</li>
+<li>running scripts and terminal commands;</li>
+<li>submitting forms, completing purchases, and making bookings;</li>
+<li>modifying calendar entries, contacts, and other personal data.</li>
+</ul>
+<p>(b) Many Agent Actions <strong>cannot be undone</strong>. A deleted file may not be recoverable. A sent email cannot be unsent. A submitted form may trigger irreversible downstream processes.</p>
+<p>(c) <strong>AI outputs are probabilistic and may be wrong.</strong> The Software relies on an AI model that may misunderstand your goal, misread the screen, or take an unintended action.</p>
+<p>(d) <strong>You are solely responsible for supervising every Agent Action</strong> the Software takes. You must monitor each run, maintain the ability to interrupt the agent at any time (using the Software's stop control or by revoking macOS Accessibility/Screen Recording permissions), and review Agent Actions before they affect critical data or third parties.</p>
+<p>(e) <strong>You bear full responsibility for consequences of Agent-initiated communications.</strong> Any email, message, or other communication sent by the agent on your behalf is legally your communication. You are responsible for its content, accuracy, and compliance with applicable law (including anti-spam, consumer-protection, and employment laws).</p>
+<p>(f) <strong>Clazro is not liable for any Agent Action</strong>, including actions that are unintended, incorrect, or harmful. See Section 13 (Limitation of Liability).</p>
+<p><strong>5.2 Your Obligations as Supervisor.</strong></p>
+<p>You agree to:</p>
+<p>(a) run the Software only on tasks you have reviewed and for which you accept responsibility;</p>
+<p>(b) maintain current backups of all data that could be affected by Agent Actions;</p>
+<p>(c) not leave an active agent run unattended for critical tasks;</p>
+<p>(d) promptly revoke macOS Accessibility and Screen Recording permissions if you wish to prevent further Agent Actions.</p>
+<hr>
+<h2>6. AI Provider Terms — BYOK</h2>
+<p>6.1 <strong>BYOK.</strong> The Software is designed to be used with an AI Provider API key that you supply ("BYOK Key"). You are responsible for:</p>
+<p>(a) obtaining a BYOK Key under a valid agreement with the relevant AI Provider;</p>
+<p>(b) all costs and usage fees charged by the AI Provider;</p>
+<p>(c) compliance with the AI Provider's terms of service, acceptable-use policies, and data-processing terms;</p>
+<p>(d) keeping your BYOK Key confidential; if compromised, revoking it immediately with the AI Provider.</p>
+<p>6.2 <strong>Clazro's role.</strong> Clazro transmits your screen data and goal text to the AI Provider you configure, using the BYOK Key you supply. Clazro is not a party to the contract between you and your AI Provider. Clazro has no control over how the AI Provider processes, retains, or uses data sent to its API.</p>
+<p>6.3 <strong>No guarantee of provider availability.</strong> If an AI Provider changes its API, suspends your account, or becomes unavailable, the Software may not function. Clazro is not liable for such interruptions.</p>
+<p>6.4 <strong>Default provider.</strong> The default AI Provider is AWS Bedrock (Anthropic Claude). You may configure alternative providers (Anthropic API, Google Gemini, OpenAI). Each provider has its own terms; links to key terms are provided in the Software's setup wizard. Lawyer to insert direct links before publishing.</p>
+<hr>
+<h2>7. AI Output Accuracy Notice</h2>
+<p>7.1 AI Outputs are generated by probabilistic models and <strong>may be factually incorrect, incomplete, outdated, or misleading.</strong></p>
+<p>7.2 <strong>Do not rely on AI Outputs for medical, legal, financial, safety, or other professional advice</strong> without independent verification from a qualified human professional.</p>
+<p>7.3 <strong>Factual assertions in AI Outputs should be independently verified</strong> before acting on them, particularly when those assertions will be communicated to third parties or used to make significant decisions.</p>
+<p>7.4 Clazro makes no representation that AI Outputs are accurate, current, or fit for any particular purpose. See Section 12 (No Warranty).</p>
+<hr>
+<h2>8. Acceptable Use Policy</h2>
+<p>8.1 <strong>Prohibited uses.</strong> You may not use the Software:</p>
+<p>(a) to develop, test, or deploy weapons of mass destruction (biological, chemical, nuclear, radiological) or to attack critical infrastructure;</p>
+<p>(b) to generate, distribute, or facilitate child sexual abuse material (CSAM) or other sexual content involving minors;</p>
+<p>(c) to conduct cyberattacks, deploy malware, or interfere with computer systems or networks without authorisation;</p>
+<p>(d) to impersonate another person or entity in a manner that deceives or could deceive recipients;</p>
+<p>(e) to generate or send spam or unsolicited bulk communications;</p>
+<p>(f) to circumvent access controls, engage in credential stuffing, or violate the terms of third-party services;</p>
+<p>(g) to discriminate against individuals on the basis of protected characteristics in violation of applicable law;</p>
+<p>(h) for any purpose that violates applicable laws or regulations in your jurisdiction or the jurisdiction of any affected person.</p>
+<p>8.2 <strong>AI Provider AUP pass-through.</strong> The Software relies on third-party AI Providers subject to their own acceptable-use policies. You agree to comply with the acceptable-use policy of the AI Provider you configure. For reference:</p>
+<ul>
+<li>Anthropic AUP: https://www.anthropic.com/legal/aup</li>
+<li>AWS Acceptable Use Policy: https://aws.amazon.com/aup/</li>
+</ul>
+<p>   *(Lawyer to add Google and OpenAI AUP links if those providers are supported at launch.)*</p>
+<p>Your use of AI Provider services through the Software does not exempt you from those policies. Clazro may suspend or terminate your access if it receives notice or has reason to believe you are violating an AI Provider's acceptable-use policy.</p>
+<hr>
+<h2>9. No Model Extraction</h2>
+<p>You will not, directly or indirectly:</p>
+<p>(a) attempt to extract, reconstruct, replicate, or derive the weights, parameters, architecture, or training data of any AI model accessed through the Software;</p>
+<p>(b) use the Software to generate outputs for the purpose of training a competing AI model without the AI Provider's express written consent;</p>
+<p>(c) circumvent rate limits, access controls, or monitoring mechanisms implemented by any AI Provider.</p>
+<p>*Note: This clause is intended to address concerns raised in AWS Service Terms §22.6 and similar provider restrictions. Lawyer to confirm scope and enforceability.*</p>
+<hr>
+<h2>10. Payment and Refunds</h2>
+<p>10.1 <strong>Fees.</strong> Current pricing is displayed at [pricing page URL — to be inserted]. Clazro reserves the right to change Beta pricing at any time with reasonable notice.</p>
+<p>10.2 <strong>Payment.</strong> Fees are charged in advance via the payment method you provide. You authorise Clazro to charge applicable fees.</p>
+<p>10.3 <strong>Refunds.</strong> *(Lawyer to set refund policy — consider: no refund after download, or pro-rata on annual plans, subject to Indian consumer-protection law and any applicable rules under the Consumer Protection Act 2019 and Consumer Protection (E-Commerce) Rules 2020.)*</p>
+<p>10.4 <strong>Taxes.</strong> You are responsible for any taxes, duties, or levies applicable to your purchase.</p>
+<hr>
+<h2>11. Term and Termination</h2>
+<p>11.1 <strong>Term.</strong> This Agreement begins on the date you accept it and continues until terminated.</p>
+<p>11.2 <strong>Termination by you.</strong> You may terminate this Agreement at any time by uninstalling the Software and deleting all copies.</p>
+<p>11.3 <strong>Termination by Clazro.</strong> Clazro may terminate this Agreement or suspend your access immediately if:</p>
+<p>(a) you breach any provision of this Agreement and fail to cure the breach within 7 days of written notice (where the breach is curable);</p>
+<p>(b) you violate Section 8 (Acceptable Use) or Section 9 (No Model Extraction);</p>
+<p>(c) Clazro ends the Beta programme;</p>
+<p>(d) required by law or regulatory authority.</p>
+<p>11.4 <strong>Effect of termination.</strong> On termination: (a) the licence in Section 3 immediately ends; (b) you must uninstall the Software and delete all copies; (c) provisions that by their nature should survive termination (Sections 3.1, 5, 7, 12, 13, 14, 15, 16, 17, 18) survive.</p>
+<hr>
+<h2>12. No Warranty — AS IS</h2>
+<p><strong>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW:</strong></p>
+<p>12.1 THE SOFTWARE IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong> WITHOUT WARRANTY OF ANY KIND.</p>
+<p>12.2 CLAZRO EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING:</p>
+<p>(a) <strong>implied warranties of merchantability</strong> — Clazro does not warrant that the Software is of satisfactory quality or fit for ordinary purposes;</p>
+<p>(b) <strong>implied warranties of fitness for a particular purpose</strong> — Clazro does not warrant that the Software is suitable for your specific use case;</p>
+<p>(c) <strong>warranties of accuracy of AI outputs</strong> — Clazro does not warrant that Agent Actions will produce intended results, that AI Outputs will be correct, complete, or current, or that the Software will perform any task correctly;</p>
+<p>(d) <strong>warranties of non-infringement</strong>;</p>
+<p>(e) <strong>warranties of uninterrupted or error-free operation</strong>.</p>
+<p>12.3 Some jurisdictions do not allow disclaimer of certain implied warranties. In those jurisdictions, Clazro's liability is limited to the minimum extent permitted by applicable law. *(Lawyer to confirm Indian and EU consumer-law carve-outs.)*</p>
+<hr>
+<h2>13. Limitation of Liability</h2>
+<p><strong>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW:</strong></p>
+<p>13.1 <strong>Cap.</strong> Clazro's total aggregate liability to you arising out of or related to this Agreement, the Software, or any Agent Action shall not exceed the <strong>greater of (i) the total fees you paid to Clazro in the twelve (12) months immediately preceding the event giving rise to the claim, or (ii) USD 100 (one hundred US dollars)</strong>.</p>
+<p>13.2 <strong>Exclusion of consequential damages.</strong> In no event shall Clazro be liable for:</p>
+<p>(a) loss of data (including data deleted by Agent Actions);</p>
+<p>(b) loss of profits, revenue, business, or goodwill;</p>
+<p>(c) business interruption;</p>
+<p>(d) claims by third parties arising from Agent Actions, including but not limited to claims arising from emails or messages sent by the agent on your behalf;</p>
+<p>(e) costs of substitute goods or services;</p>
+<p>(f) indirect, incidental, special, consequential, exemplary, or punitive damages;</p>
+<p>whether based on contract, tort (including negligence), strict liability, or any other legal theory, even if Clazro has been advised of the possibility of such damages.</p>
+<p>13.3 <strong>Basis of bargain.</strong> You acknowledge that the limitations in this Section reflect a reasonable allocation of risk and are an essential basis of the bargain between you and Clazro. Clazro would not have provided the Software on these terms without these limitations.</p>
+<p>13.4 Some jurisdictions (including certain EU member states and India under the Consumer Protection Act 2019) do not allow exclusion of liability for personal injury, death, fraud, or wilful misconduct. Nothing in this Agreement limits Clazro's liability for those matters. *(Lawyer to confirm applicability and mandatory carve-outs.)*</p>
+<hr>
+<h2>14. Indemnification</h2>
+<p>14.1 <strong>User indemnification of Clazro.</strong> You agree to defend, indemnify, and hold harmless Clazro and its officers, directors, employees, and contractors from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising out of or relating to:</p>
+<p>(a) Agent Actions taken by the Software while operating under your direction or with your BYOK Key;</p>
+<p>(b) emails, messages, or other communications sent to third parties by the agent on your behalf;</p>
+<p>(c) your violation of any applicable law, regulation, or third-party right (including intellectual property, privacy, and anti-spam laws);</p>
+<p>(d) your breach of this Agreement;</p>
+<p>(e) your misuse of the Software, including use in violation of Section 8.</p>
+<p>14.2 <strong>Clazro indemnification of user.</strong> Clazro agrees to defend, indemnify, and hold you harmless from and against third-party claims alleging that the core Software (excluding AI Provider outputs, any content you supply, and Agent Actions taken at your direction) infringes a third party's copyright, patent, or trade secret rights under the laws of India, provided that you: (a) promptly notify Clazro in writing of the claim; (b) give Clazro sole control of the defence and settlement; (c) provide reasonable cooperation. This indemnity does not apply where the infringement claim arises from your modification of the Software or your combination of the Software with other products.</p>
+<p>14.3 <strong>Indemnification procedure.</strong> The indemnified party must: (a) promptly notify the indemnifying party of any claim; (b) give the indemnifying party reasonable control of the defence; (c) cooperate with reasonable requests. Failure to provide prompt notice does not relieve the indemnifying party of its obligations except to the extent it is materially prejudiced by the delay.</p>
+<hr>
+<h2>15. Changes to this Agreement</h2>
+<p>15.1 Clazro may update this Agreement at any time. We will provide notice of material changes by: (a) displaying a notice in the Software; or (b) emailing the address associated with your account, at least 14 days before the changes take effect.</p>
+<p>15.2 Your continued use of the Software after the effective date of changes constitutes acceptance of the revised Agreement. If you do not agree to the revised terms, you must stop using the Software and uninstall it before the effective date.</p>
+<hr>
+<h2>16. Governing Law and Dispute Resolution</h2>
+<p>16.1 <strong>Governing law.</strong> This Agreement is governed by the laws of <strong>[India / [specific state — lawyer to advise]]</strong>, without regard to conflict-of-laws principles. *(Lawyer: consider Karnataka or Delhi given company registration; confirm applicability of IT Act 2000, Consumer Protection Act 2019, and any mandatory consumer-arbitration requirements.)*</p>
+<p>16.2 <strong>Dispute resolution.</strong> The parties shall first attempt to resolve any dispute by good-faith negotiation for 30 days. If unresolved, disputes shall be submitted to <strong>[arbitration under the Arbitration and Conciliation Act 1996 of India / courts of [city] — lawyer to set]</strong>.</p>
+<p>16.3 <strong>Class-action waiver.</strong> *(Lawyer to advise on enforceability in India and in jurisdictions where users are located; may not be enforceable in EU.)*</p>
+<hr>
+<h2>17. General Provisions</h2>
+<p>17.1 <strong>Entire agreement.</strong> This Agreement and the Privacy Policy constitute the entire agreement between the parties regarding the Software and supersede all prior agreements.</p>
+<p>17.2 <strong>Severability.</strong> If any provision is held invalid or unenforceable, that provision is modified to the minimum extent necessary to make it enforceable, and the remaining provisions continue in full force.</p>
+<p>17.3 <strong>Waiver.</strong> Clazro's failure to enforce any provision is not a waiver of its right to do so later.</p>
+<p>17.4 <strong>Assignment.</strong> You may not assign this Agreement or any rights under it without Clazro's prior written consent. Clazro may assign this Agreement in connection with a merger, acquisition, or sale of all or substantially all of its assets.</p>
+<p>17.5 <strong>Export compliance.</strong> You represent that you are not located in a country subject to applicable export-control restrictions and will comply with all applicable export laws.</p>
+<p>17.6 <strong>Force majeure.</strong> Clazro is not liable for failure to perform due to causes beyond its reasonable control.</p>
+<hr>
+<h2>18. Contact</h2>
+<p><strong>Clazro Technology Private Limited</strong></p>
+<p>Email: singhaldeoli106@gmail.com</p>
+<p>*(Lawyer to add: registered address, CIN, grievance officer name + contact as required by IT (Intermediary Guidelines) Rules 2021.)*</p>
+<hr>
+<p>*End of EULA and Terms of Service*</p>
+</div></main>
+<footer><div class="wrap foot"><div>© 2026 Clazro Technology Private Limited · ScreenHand</div><div style="display:flex;gap:16px"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:singhaldeoli106@gmail.com">Contact</a></div></div></footer>
+</body></html>
