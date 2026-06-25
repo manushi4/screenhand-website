@@ -14,15 +14,20 @@ ScreenHand is a remote Android control surface that speaks the Model Context Pro
 - Token isolation: each device sits behind its own secret link; invalid links see nothing.
 - A real device over the internet on a poll loop — built for reliability and realness, NOT real-time/twitch-speed control.
 
+## Getting started (self-register)
+
+- Download the signed Agent APK at https://screenhand.com/download/ , install it (sideload), open it, and tap "Generate my link" — the app creates your own connect link + QR on the device. No sign-up, no email, no website-issued token.
+- Point any MCP client at that link to drive the phone, or use the live browser view.
+
 ## Honest disclosure
 
 - Screen contents (and OCR results) are relayed over the internet to whatever AI provider you connect. It is NOT local-only and NOT private from that provider. We say "token-isolated," never "private."
-- Free during beta. Request a private link by email.
+- Free during beta.
 
 ## Two builds
 
-- ScreenHand Remote — human-driven remote control (Play / Galaxy Store).
-- ScreenHand Agent — full autonomous AI agent (direct APK download).
+- ScreenHand Agent — full autonomous AI agent (direct APK download at https://screenhand.com/download/ ).
+- ScreenHand Remote — human-driven remote control (coming to Play / Galaxy Store).
 
 ## Also: Desktop
 
