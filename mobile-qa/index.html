@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Mobile QA &amp; Test Automation on Real Devices — ScreenHand</title>
+<meta name="description" content="Automate mobile QA on real Android devices with an AI agent. Reads canvas/WebView via on-device OCR where selector-based tools go blind, replays deterministic macros with no flaky tests, and connects to any MCP client.">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="AI mobile QA, mobile test automation, real device testing, Appium alternative, Maestro alternative, flaky test, mobile regression testing, AI agent QA, on-device OCR testing, MCP testing">
+<link rel="canonical" href="https://screenhand.com/mobile-qa/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Mobile QA &amp; Test Automation on Real Devices — ScreenHand">
+<meta property="og:description" content="Automate mobile QA on real Android devices with an AI agent. Sees canvas/WebView via on-device OCR, replays deterministic macros, connects to any MCP client.">
+<meta property="og:image" content="https://screenhand.com/og-image.png">
+<meta property="og:url" content="https://screenhand.com/mobile-qa/">
+<meta property="og:site_name" content="ScreenHand">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Mobile QA &amp; Test Automation on Real Devices — ScreenHand">
+<meta name="twitter:description" content="Automate mobile QA on real Android devices with an AI agent. Sees canvas/WebView, replays deterministic macros, MCP-native.">
+<meta name="twitter:image" content="https://screenhand.com/og-image.png">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "AI Mobile QA & Test Automation on Real Devices",
+  "url": "https://screenhand.com/mobile-qa/",
+  "description": "Automate mobile QA on real Android devices with an AI agent that reads canvas/WebView via on-device OCR and replays deterministic macros.",
+  "isPartOf": { "@type": "WebSite", "name": "ScreenHand", "url": "https://screenhand.com/" },
+  "publisher": { "@type": "Organization", "name": "Clazro Technology Private Limited" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "ScreenHand", "item": "https://screenhand.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Mobile QA", "item": "https://screenhand.com/mobile-qa/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is ScreenHand an Appium or Maestro alternative?", "acceptedAnswer": {"@type": "Answer", "text": "It is complementary. Appium, Espresso and Maestro drive elements by selectors; ScreenHand adds an AI agent plus on-device OCR/vision that can read and act on canvas, WebView and game UIs where selectors do not exist. You can use it for the flows traditional tools cannot reach."}},
+    {"@type": "Question", "name": "Does it run on real devices or emulators?", "acceptedAnswer": {"@type": "Answer", "text": "Real Android devices. That means real accounts, real logins, and no anti-bot tripwires that emulators trigger."}},
+    {"@type": "Question", "name": "How does it avoid flaky tests?", "acceptedAnswer": {"@type": "Answer", "text": "You record a flow once and replay it as a deterministic macro — same steps every run, no AI cost per run, with CSV output for data-driven runs."}},
+    {"@type": "Question", "name": "How does it integrate with our stack?", "acceptedAnswer": {"@type": "Answer", "text": "ScreenHand speaks the Model Context Protocol (MCP), so any MCP-compatible client — Claude Code, Claude Desktop, Cursor — drives the device through one URL."}}
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#0b0f14;--bg2:#10151c;--card:#121925;--card2:#0e141d;--line:#1f2937;--line2:#2b3647;
+  --text:#eef2f7;--text2:#a7b2c2;--text3:#6b7686;
+  --accent:#3b82f6;--accent-d:#2563eb;--accent-l:#1e293b;--cyan:#22d3ee;--emerald:#34d399;--rose:#fb7185;
+  --f:'Inter',system-ui,-apple-system,sans-serif;--fd:'Space Grotesk',sans-serif;--m:'JetBrains Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);--maxw:1000px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--bg);color:var(--text);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none;transition:color .15s}a:hover{color:#60a5fa}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--fd);line-height:1.14;letter-spacing:-.02em;color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;transition:transform .15s var(--ease),background .15s,border-color .15s;border:0}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px -10px rgba(59,130,246,.7)}
+.btn-primary:hover{color:#fff;background:var(--accent-d);transform:translateY(-2px)}
+.btn-ghost{color:var(--text);border:1px solid var(--line2);background:transparent}
+.btn-ghost:hover{border-color:var(--text3);background:var(--bg2)}
+nav{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font:700 19px var(--fd);color:var(--text)}
+.brand img{width:28px;height:28px;border-radius:7px}
+.nav-links{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:500}
+.nav-links a{color:var(--text2)}.nav-links a:hover{color:var(--text)}
+@media(max-width:680px){.nav-links a:not(.btn){display:none}}
+.hero{padding:74px 0 26px;background:radial-gradient(120% 90% at 70% -10%,rgba(59,130,246,.16) 0%,transparent 55%)}
+.kicker{font:600 12.5px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{font-size:clamp(30px,4.6vw,50px);font-weight:700;max-width:20ch;margin:16px 0 0}
+.hero p.lead{font-size:clamp(17px,2.1vw,20px);color:var(--text2);max-width:60ch;margin:18px 0 0}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0;align-items:center}
+section{padding:54px 0;border-top:1px solid var(--line)}
+.sec-head{max-width:64ch}
+.sec-head h2{font-size:clamp(24px,3vw,34px);font-weight:700;margin:10px 0 0}
+.sec-head p{color:var(--text2);font-size:17px;margin:12px 0 0}
+.grid{display:grid;gap:18px;margin:34px 0 0}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:820px){.g3,.g2{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--card)}
+.card h3{font-size:17px;font-weight:600}
+.card p{color:var(--text2);font-size:14.5px;margin:9px 0 0}
+.card .ic{font-size:22px;display:block;margin:0 0 12px}
+table.cmp{width:100%;border-collapse:collapse;margin:30px 0 0;font-size:14.5px}
+table.cmp th,table.cmp td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line)}
+table.cmp th{color:var(--text3);font:600 12px var(--m);letter-spacing:.04em;text-transform:uppercase}
+table.cmp td{color:var(--text2)}
+table.cmp td b{color:var(--text)}
+.note{margin:24px 0 0;border:1px solid var(--line2);background:var(--card2);border-radius:11px;padding:15px 17px;color:var(--text2);font-size:14px}
+.note b{color:var(--text)}
+.faq details{border:1px solid var(--line);border-radius:12px;padding:4px 18px;margin:0 0 12px;background:var(--card)}
+.faq summary{font-family:var(--fd);font-weight:600;font-size:16px;color:var(--text);cursor:pointer;list-style:none;padding:15px 0;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--text3);font-size:22px}
+.faq details[open] summary::after{content:"–"}
+.faq p{color:var(--text2);font-size:15px;padding:0 0 16px}
+.final{text-align:center;background:radial-gradient(100% 130% at 50% 0%,rgba(34,211,238,.1) 0%,transparent 60%)}
+.final h2{font-size:clamp(24px,3.4vw,36px)}
+.final p{max-width:52ch;margin:14px auto 0;color:var(--text2);font-size:17px}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--text3);font-size:13.5px}
+.foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+.foot a{color:var(--text2)}.foot a:hover{color:var(--text)}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav">
+  <a class="brand" href="../"><img src="../assets/screenhand-logo-64.png" alt="">ScreenHand</a>
+  <div class="nav-links">
+    <a href="../#features">Features</a>
+    <a href="../#tools">Tools</a>
+    <a href="../desktop/">Desktop</a>
+    <a class="btn btn-primary" href="../download/">⬇ Download</a>
+  </div>
+</div></nav>
+
+<main>
+<header class="hero"><div class="wrap">
+  <div class="kicker">🖐 Mobile QA · real devices</div>
+  <h1>AI mobile QA and test automation — on real Android devices.</h1>
+  <p class="lead">Drive real apps on a real phone with an AI agent: it reads <b>canvas, WebView and game UIs via on-device OCR</b> where selector-based tools go blind, and replays <b>deterministic macros</b> with no flaky tests. MCP-native — connect Claude, Cursor, or any agent.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="../download/">⬇ Try it on your device</a>
+    <a class="btn btn-ghost" href="mailto:singhaldeoli106@gmail.com?subject=ScreenHand%20for%20mobile%20QA">Talk to us</a>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">The problem</div>
+    <h2>Selector-based mobile testing breaks where it matters most.</h2>
+  </div>
+  <div class="grid g3">
+    <div class="card"><span class="ic">🧩</span><h3>Canvas &amp; WebView are invisible</h3><p>Appium/Espresso need element IDs. Games, Flutter/canvas screens, charts and embedded WebViews expose none — so those flows go untested.</p></div>
+    <div class="card"><span class="ic">🌊</span><h3>Flaky tests erode trust</h3><p>Brittle locators break on every layout tweak; teams spend more time fixing tests than shipping. "Re-run until green" isn't a strategy.</p></div>
+    <div class="card"><span class="ic">📵</span><h3>Emulators aren't reality</h3><p>Real logins, real payment sheets, and anti-bot checks behave differently on a real device — the only place a real regression shows up.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">How ScreenHand helps</div>
+    <h2>An AI agent with real hands — and eyes that read pixels.</h2>
+  </div>
+  <div class="grid g2">
+    <div class="card"><span class="ic">🔎</span><h3>Sees anything via on-device OCR</h3><p>Reads text and targets from canvas, WebView and game screens — no element IDs required — so you can verify and act on UIs selectors can't reach.</p></div>
+    <div class="card"><span class="ic">⏺️</span><h3>Deterministic macro replay</h3><p>Record a regression flow once, replay it exactly every run with zero AI cost per run, and export results to CSV for data-driven test sets.</p></div>
+    <div class="card"><span class="ic">📱</span><h3>Real devices, real signals</h3><p>Genuine taps, typing and gestures through Android's accessibility layer on a real phone — the conditions your users actually hit.</p></div>
+    <div class="card"><span class="ic">🛠️</span><h3>MCP-native, fits your CI</h3><p>One URL exposes the full toolset to any MCP client (Claude, Cursor, your own agent), so it slots into agent-driven and scripted pipelines alike.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Where it fits</div>
+    <h2>Complement your stack — don't rip it out.</h2>
+  </div>
+  <table class="cmp">
+    <tr><th>Layer</th><th>Best tool</th><th>What ScreenHand adds</th></tr>
+    <tr><td><b>Native element flows</b></td><td>Appium · Espresso · Maestro</td><td>Keep them — they're great with element IDs.</td></tr>
+    <tr><td><b>Canvas / WebView / games</b></td><td>—</td><td><b>OCR + vision</b> reads and acts where selectors don't exist.</td></tr>
+    <tr><td><b>Exploratory / agentic checks</b></td><td>—</td><td>An <b>AI agent</b> navigates new flows from a plain-English goal.</td></tr>
+    <tr><td><b>Repeatable regression</b></td><td>Scripted suites</td><td><b>Record-once macros</b> replay deterministically, $0 per run.</td></tr>
+  </table>
+  <div class="note"><b>Honest about reliability:</b> ScreenHand drives a real device over the internet on a poll loop — built for realness, not millisecond timing, and not for real-time/twitch games. Worker-stability hardening is ongoing; ask us where it stands before you depend on it in a critical pipeline.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><div class="kicker">FAQ</div><h2>Mobile QA — straight answers.</h2></div>
+  <div class="faq" style="margin-top:28px">
+    <details open><summary>Is ScreenHand an Appium or Maestro alternative?</summary><p>It's complementary. Appium, Espresso and Maestro drive elements by selectors; ScreenHand adds an AI agent plus on-device OCR/vision that reads and acts on canvas, WebView and game UIs where selectors don't exist.</p></details>
+    <details><summary>Real devices or emulators?</summary><p>Real Android devices — real accounts, real logins, and no anti-bot tripwires that emulators trigger.</p></details>
+    <details><summary>How do you avoid flaky tests?</summary><p>Record a flow once and replay it as a deterministic macro — same steps every run, no AI cost per run, with CSV output for data-driven runs.</p></details>
+    <details><summary>How does it integrate with our stack?</summary><p>ScreenHand speaks the Model Context Protocol (MCP), so any MCP-compatible client — Claude Code, Claude Desktop, Cursor — drives the device through one URL.</p></details>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Test the flows your current tools can't reach.</h2>
+  <p>Free during beta. Install on a real device and connect your agent in one line.</p>
+  <div class="cta-row" style="justify-content:center;margin-top:24px">
+    <a class="btn btn-primary" href="../download/">⬇ Download for Android</a>
+    <a class="btn btn-ghost" href="mailto:singhaldeoli106@gmail.com?subject=ScreenHand%20for%20mobile%20QA">Talk to us</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap foot">
+  <div>© 2026 Clazro Technology Private Limited · ScreenHand</div>
+  <div style="display:flex;gap:18px">
+    <a href="../">Home</a>
+    <a href="../download/">Download</a>
+    <a href="../privacy/">Privacy</a>
+    <a href="mailto:singhaldeoli106@gmail.com">Contact</a>
+  </div>
+</div></footer>
+</body>
+</html>
